@@ -1,0 +1,1410 @@
+/*******************************************************
+ *
+ * Mobile styles and other media queries
+ *
+ *******************************************************/
+:root {
+  /* Custom Variable */
+  --clr-primary: #273859;
+  --clr-accent: #8c8c8c;
+  --clr-body: #0d0d0d;
+
+  --ff-primary: "Work Sans", sans-serif;
+  --ff-secondary: "Inter", sans-serif;
+  --ff-tertiary: "Montserrat", sans-serif;
+}
+@media only screen and (min-width: 481px) {
+  /* Global */
+  .primary-text {
+    font-size: 40px;
+  }
+
+  /* Header */
+  .header-logo a {
+    font-size: 23px;
+  }
+
+  /* Featured Properties */
+  .fp-descript {
+    bottom: -94px;
+  }
+
+  .listing-price {
+    font-size: 32px;
+  }
+
+  .listing-address {
+    font-size: 17px;
+  }
+
+  .bbs {
+    font-size: 15px;
+    text-transform: uppercase;
+  }
+
+  /* Featured VIdeos */
+  .fv-play-info p {
+    margin-top: 30px;
+  }
+
+  /* Buy List With Us */
+  .hp-buy-list .section-number {
+    top: -9px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  /* Global */
+  .primary-text {
+    font-size: 50px;
+  }
+
+  .section-number {
+    font-size: 18px;
+  }
+
+  /* Slideshow */
+  .slideshow-title {
+    font-size: 50px;
+  }
+
+  .slideshow-descript {
+    font-size: 20px;
+  }
+
+  /* Welcome */
+  .hp-welcome p {
+    font-size: 16px;
+  }
+
+  /* Neighborhood */
+
+  .nb-info-hover h3 {
+    font-size: 35px;
+  }
+
+  .nb-title {
+    font-size: 28px;
+  }
+
+  /* Featured Videos */
+  .fv-play-info {
+    font-size: 22px;
+  }
+
+  .fv-play-info img {
+    margin: 0 auto;
+    width: initial;
+  }
+
+  .fv-play-info p {
+    margin-top: 50px;
+  }
+
+  /* Buy List With Us */
+  .hp-buy-list .section-number {
+    top: -12px;
+  }
+
+  .hp-buy-list .bwu-intro {
+    font-size: 18px;
+  }
+
+  .hp-buy-list p {
+    font-size: 15px;
+  }
+
+  /* Testimonials */
+  .testi-content h3 {
+    font-size: 20px;
+  }
+
+  /* Contact */
+  .contact-intro {
+    font-size: 16px;
+  }
+
+  /* Footer */
+  .footer-logo {
+    font-size: 46px;
+    text-align: center;
+  }
+
+  .footer-copy::before {
+    width: 85%;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  /* Header */
+  .header {
+    font-size: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1010;
+    padding: 20px 6%;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .header.show-fixed {
+    background: rgba(13, 13, 13, 0.8);
+  }
+
+  .header-inner {
+    display: grid;
+    grid-template-columns: repeat(2, auto) 50px;
+    align-items: center;
+    max-width: 1412px;
+    margin: 0 auto;
+  }
+
+  .header-nav {
+    justify-self: end;
+  }
+
+  .header-inner .textwidget:last-of-type {
+    justify-self: end;
+  }
+
+  .burger-menu {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    cursor: pointer;
+    justify-content: center;
+    align-items: center;
+    /* margin-left: 80px; */
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .site-burger {
+    background: #fff;
+    display: flex;
+    height: 2px;
+    position: relative;
+    width: 100%;
+    justify-content: flex-end;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .site-burger::before,
+  .site-burger::after {
+    content: "";
+    position: absolute;
+    background: #fff;
+    height: 2px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .site-burger::before {
+    transform: translateY(10px);
+    width: 30px;
+  }
+
+  .site-burger::after {
+    transform: translateY(-10px);
+    width: 40px;
+  }
+
+  .burger-menu:hover .site-burger:before,
+  .burger-menu:hover .site-burger:after,
+  .burger-menu:focus .site-burger:before,
+  .burger-menu:focus .site-burger:after {
+    width: 100%;
+  }
+
+  /* Burger Menu */
+  .bm-drop {
+    position: fixed;
+    z-index: 1032;
+    top: 0;
+    left: 0;
+    right: initial;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    -webkit-transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+  }
+
+  .bm-drop {
+    z-index: 1035;
+  }
+
+  .bm-view.is-open {
+    visibility: visible;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+
+  .bm-menu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    font-size: 0;
+    letter-spacing: 0;
+    z-index: 1036;
+    visibility: hidden;
+    height: 100%;
+    width: 100%;
+    max-width: 717px;
+    background: url(images/bm-bg.jpg) center/cover no-repeat;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+    -webkit-transition: all 0.5s;
+    transition: all 0.5s;
+  }
+
+  .bm-menu::before {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+    background: rgba(255, 255, 255, 0.87);
+  }
+
+  .bm-content {
+    width: 100%;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+
+  .bm-inner {
+    padding: 40px 9.3% 28px;
+    width: 100%;
+    height: 100%;
+    overflow: hidden auto;
+
+    border-bottom: 4px solid var(--clr-primary);
+  }
+
+  .bm-drop.bm-view.is-open {
+    background: rgba(0, 0, 0, 0.6);
+  }
+
+  .bm-navs,
+  .bm-header {
+    text-transform: uppercase;
+  }
+
+  /* Burger Header */
+
+  .bm-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 0 32px 44px 0;
+  }
+
+  .bm-title {
+    font-weight: 600;
+    font-size: 30px;
+    letter-spacing: 0.2em;
+    color: #000;
+  }
+
+  .bm-close .ai-font-close-b {
+    font-size: 36px;
+    cursor: pointer;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .bm-close:hover .ai-font-close-b,
+  .bm-close:focus .ai-font-close-b {
+    opacity: 0.6;
+  }
+
+  /* Burger Navs */
+
+  #nav2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  #nav2 > li {
+    padding-left: 26px;
+  }
+
+  #nav2 li > a {
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 1.6;
+  }
+
+  #nav2 li [data-title="Book An Appointment"] {
+    line-height: 1.16;
+  }
+
+  #nav2 li [data-title="Marketing"] {
+    line-height: 2;
+  }
+
+  #nav2 > li:first-of-type {
+    margin-bottom: 9px;
+  }
+
+  #nav2 > li:nth-of-type(3) {
+    align-self: center;
+  }
+
+  #nav2 > li:nth-of-type(4) {
+    margin-bottom: 21px;
+  }
+
+  #nav2 > li:nth-of-type(5) {
+    margin-bottom: 31px;
+  }
+
+  #nav2 li [data-title="Contact"] {
+    position: relative;
+    top: -73px;
+  }
+
+  #nav2 .sub-menu a {
+    color: #414141;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 1.7;
+  }
+
+  #nav2 a {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  #nav2 a:hover,
+  #nav2 a:focus {
+    opacity: 0.7;
+    color: var(--clr-body);
+  }
+
+  .bm-navs {
+    margin-bottom: 50px;
+  }
+
+  /* Burger Info */
+  .bm-info {
+    margin-top: 20px;
+  }
+
+  .bm-address {
+    position: relative;
+
+    text-transform: uppercase;
+    color: #414141;
+    font-size: 16px;
+
+    margin-bottom: 11px;
+  }
+
+  .bm-address::before {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+    top: -20px;
+    height: 1px;
+    width: 100%;
+
+    background: #cbcbcb;
+  }
+
+  .bm-address .ai-font-location-c {
+    color: var(--clr-primary);
+    vertical-align: middle;
+  }
+
+  .bm-contact {
+    color: #414141;
+    display: flex;
+    justify-content: center;
+
+    font-size: 16px;
+  }
+
+  .bm-contact .ai-font-phone,
+  .bm-contact .ai-font-envelope-f {
+    color: var(--clr-primary);
+    font-size: 10px;
+    margin-right: 7px;
+  }
+
+  .bm-phone {
+    margin-right: 22px;
+    position: relative;
+  }
+
+  .bm-phone em,
+  .bm-email a {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .bm-phone em:hover,
+  .bm-email a:hover,
+  .bm-phone em:focus,
+  .bm-email a:focus {
+    opacity: 0.65;
+    color: #414141;
+  }
+
+  .bm-phone::before {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+    top: 0;
+    right: -22px;
+    height: 26px;
+    width: 1px;
+
+    background: #cbcbcb;
+  }
+
+  .bm-email {
+    margin-left: 22px;
+  }
+
+  /* Burger Social */
+  .bm-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: var(--clr-primary);
+    font-size: 25px;
+
+    margin-top: 25px;
+  }
+
+  .bm-social a + a {
+    margin-left: 30px;
+  }
+
+  .bm-social a {
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .bm-social a:hover,
+  .bm-social a:focus {
+    opacity: 0.65;
+  }
+
+  /* Burger Menu End */
+
+  /* Slideshow */
+  .slideshow-content {
+    position: absolute;
+    top: 39%;
+    left: 14.4%;
+    z-index: 1;
+  }
+
+  .slideshow-title {
+    margin-bottom: 40px;
+  }
+
+  .slideshow-descript {
+    font-size: 16px;
+    padding-left: 20px;
+    position: relative;
+  }
+
+  .slideshow-descript::before {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+    top: 0;
+    left: 0;
+    background: #b4b2b0;
+
+    width: 1.5px;
+    height: 100%;
+  }
+
+  /* Featured Properties */
+  .hp-featured-properties {
+    padding: 99px 0 0;
+  }
+  .hp-featured-properties::before {
+    background-attachment: fixed;
+  }
+
+  .fp-inner {
+    max-width: 1410px;
+    margin: 0 auto;
+    width: 85%;
+  }
+
+  .fp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 9.7% 36px;
+  }
+
+  .fp-slick-wrap {
+    position: relative;
+  }
+
+  .fp-arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    pointer-events: none;
+  }
+
+  .fp-arrow .slick-arrow {
+    pointer-events: all;
+    position: absolute;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .fp-arrow .slick-arrow:hover,
+  .fp-arrow .slick-arrow:focus {
+    opacity: 0.65;
+  }
+
+  .fp-arrow :first-of-type {
+    left: -4.6%;
+  }
+
+  .fp-arrow :last-of-type {
+    right: -4.6%;
+  }
+
+  .listing-price {
+    font-size: 25px;
+  }
+
+  .listing-address {
+    font-size: 12px;
+  }
+
+  .bbs {
+    font-size: 12px;
+    margin-bottom: 15px;
+  }
+
+  .fp-descript {
+    bottom: -117px;
+  }
+
+  .fp-arrow .slick-arrow {
+    max-width: 20px;
+  }
+
+  /* Welcome */
+  .hp-welcome {
+    padding-top: 95px;
+  }
+
+  .welcome-inner {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    max-width: 1410px;
+    margin: 0 auto;
+    gap: 5.6%;
+  }
+
+  .welcome-img {
+    position: relative;
+    z-index: 1;
+  }
+
+  .welcome-img::before {
+    position: absolute;
+    pointer-events: none;
+    content: "";
+    border: 2px solid #9198a9;
+    top: -13px;
+    left: -22px;
+    width: 59%;
+    height: 94%;
+    z-index: -1;
+  }
+
+  .welcome-content {
+    max-width: 525px;
+    align-self: center;
+    margin-bottom: 50px;
+  }
+
+  .hp-welcome .site-btn a {
+    width: 243px;
+    height: 67px;
+  }
+
+  /* Featured Videos */
+  .hp-featured-video {
+    background: url(images/fv-bg.jpg) center/cover no-repeat;
+    padding-top: 72px;
+  }
+
+  .fv-inner {
+    max-width: 1410px;
+    margin: 0 auto;
+  }
+
+  .fv-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 9.7% 27px;
+  }
+
+  .fv-inner .primary-text {
+    color: #fff;
+  }
+
+  .fv-inner .site-btn a {
+    color: #fff;
+    border-color: #fff;
+
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .fv-inner .site-btn a:hover,
+  .fv-inner .site-btn a:focus {
+    color: #000;
+    border-color: #fff;
+    background: #fff;
+  }
+
+  .title-plus {
+    color: var(--clr-primary);
+  }
+
+  /* Neighborhood Guides */
+  .hp-neighborhood-guides {
+    padding-top: 101px;
+  }
+
+  .nb-inner {
+    max-width: 1410px;
+    margin: 0 auto;
+  }
+
+  .nb-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 0 9.7% 100px;
+  }
+
+  .nb-right {
+    display: flex;
+    align-items: center;
+  }
+
+  .nb-arrow {
+    margin-right: 36px;
+  }
+
+  .nb-arrow span {
+    font-size: 19px;
+  }
+
+  .nb-arrow span:first-of-type {
+    margin-right: 18px;
+  }
+
+  .nb-arrow span:first-of-type {
+    margin-left: 18px;
+  }
+
+  .nb-title {
+    text-align: left;
+    margin-left: 13%;
+  }
+
+  .nb-info-hover {
+    text-align: center;
+  }
+
+  /* Buy With Us | List With Us */
+  .hp-buy-list {
+    background: url(images/list-buy-bg.png) center/cover no-repeat;
+    background-position: bottom left;
+    background-attachment: fixed;
+
+    padding: 156px 0 94px;
+    /* margin-top: 156px; */
+  }
+
+  .bl-inner {
+    max-width: 1410px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 720px;
+  }
+
+  .bl-inner::before,
+  .bl-inner::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    top: 0;
+    width: 699px;
+  }
+
+  .bl-inner::before {
+    left: 0;
+    background: url(images/buy-bg.png) no-repeat;
+    height: 100%;
+  }
+
+  .bl-inner::after {
+    right: 0;
+    background: url(images/list-bg.png) no-repeat;
+    height: 100%;
+  }
+
+  .buy-with-us {
+    display: inline-block;
+    max-width: 320px;
+    position: relative;
+    left: 327px;
+  }
+
+  .list-with-us {
+    display: inline-block;
+    max-width: 320px;
+    position: relative;
+
+    right: -31%;
+    top: 147px;
+  }
+
+  /* Testimonials */
+  .hp-testimonials {
+    position: relative;
+    background: url(images/testimonial-accent-bg.png) center/cover no-repeat;
+    background-attachment: fixed;
+    padding-top: 100px;
+    margin-bottom: 30px;
+  }
+
+  .hp-testimonials::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    background: url(images/testimonial-bg.png) bottom left no-repeat;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+  .hp-testimonials::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1;
+    pointer-events: none;
+
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#ffffff+0,ffffff+100&1+0,0+52 */
+    background: -moz-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 52%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* FF3.6-15 */
+    background: -webkit-linear-gradient(
+      top,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 52%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(255, 255, 255, 0) 52%,
+      rgba(255, 255, 255, 0) 100%
+    ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ffffff', endColorstr='#00ffffff',GradientType=0 ); /* IE6-9 */
+  }
+
+  .testi-inner {
+    max-width: 64%;
+    margin-left: auto;
+    margin-right: 10%;
+    position: relative;
+    z-index: 2;
+  }
+
+  .testi-inner .section-title {
+    display: grid;
+    justify-content: end;
+    margin-right: 8.2%;
+  }
+
+  .testi-wrap {
+    background: #fff;
+    text-align: center;
+
+    padding: 31px 0 20px;
+  }
+
+  .testi-arrow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .testi-arrow .slick-arrow {
+    font-size: 19px;
+    -webkit-transition: all 0.4s ease-in-out;
+    -moz-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+  }
+
+  .testi-arrow .slick-arrow:hover .testi-arrow .slick-arrow:focus {
+    opacity: 0.65;
+  }
+
+  .testi-arrow .site-btn {
+    margin: 0 62px;
+  }
+
+  /* Contact */
+  .hp-contact {
+    background-attachment: fixed;
+    padding: 50px 0;
+  }
+
+  .contact-inner {
+    max-width: 1140px;
+    margin: 0 auto;
+  }
+
+  .hp-contact .section-title {
+    display: grid;
+    justify-content: center;
+    margin-bottom: 30px;
+  }
+
+  .contact-intro {
+    text-align: center;
+    position: relative;
+    bottom: -11px;
+  }
+
+  .contact-form {
+    max-width: unset;
+    padding: 72px 115px;
+    border-left: 1px solid rgba(255, 255, 255, 0.2);
+    border-right: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .contact-form::before,
+  .contact-form::after {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    background: rgba(255, 255, 255, 0.2);
+    height: 1px;
+    width: 22%;
+    top: 0;
+  }
+
+  .contact-form::before {
+    left: 0;
+  }
+
+  .contact-form::after {
+    right: 0;
+  }
+
+  .form-item {
+    display: inline-block;
+    width: 45%;
+  }
+
+  .form-item:nth-of-type(odd) {
+    margin-right: 35px;
+  }
+
+  .form-item:nth-of-type(even) {
+    margin-left: 35px;
+  }
+
+  .form-item.form-lg {
+    width: 100%;
+  }
+
+  .form-ms .form-item:last-of-type {
+    width: auto;
+  }
+
+  /* Footer */
+  .footer {
+    padding: 60px 0 53px;
+  }
+
+  .footer-info {
+    text-align: center;
+  }
+
+  .footer-contact {
+    display: flex;
+    justify-content: center;
+  }
+
+  .footer-phone {
+    padding-right: 17px;
+    position: relative;
+  }
+
+  .footer-phone::before {
+    content: "";
+    position: absolute;
+    pointer-events: none;
+    right: 0;
+    background: rgba(255, 255, 255, 0.2);
+    width: 1.2px;
+    height: 100%;
+  }
+
+  .footer-phone .ai-font-phone,
+  .footer-email .ai-font-envelope-f {
+    padding-right: 15px;
+  }
+
+  .footer-email {
+    padding-left: 17px;
+  }
+
+  .footernav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .footernav li + li {
+    margin: 0;
+    margin-left: 20px;
+  }
+
+  .footer-copy::before {
+    width: 100%;
+  }
+
+  .footer-copy {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 69%;
+    margin: 26px auto 0;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  /* Header */
+  .header {
+    padding: 30px 6%;
+  }
+
+  .header-logo a {
+    font-size: 25px;
+  }
+
+  #nav li a {
+    font-size: 11.5px;
+  }
+
+  #nav > li {
+    margin-right: 34px;
+  }
+
+  /* Burger Menu End */
+
+  /* Slideshow */
+  .slideshow-title {
+    font-size: 65px;
+  }
+
+  .slideshow-descript {
+    font-size: 20px;
+  }
+
+  /* Featured Properties */
+
+  .listing-price {
+    font-size: 27px;
+  }
+
+  .listing-address {
+    font-size: 14px;
+  }
+
+  .bbs {
+    font-size: 13px;
+    margin-bottom: 18px;
+  }
+
+  .fp-arrow .slick-arrow {
+    max-width: 25px;
+  }
+
+  .fp-descript {
+    bottom: -109px;
+  }
+
+  /* Welcome */
+
+  /* Featured Videos */
+
+  /* Neighborhood Guides */
+
+  /* Buy With Us | List With Us */
+
+  /* Testimonials */
+
+  /* Contact */
+
+  /* Footer */
+}
+
+@media only screen and (min-width: 1367px) {
+  /* Global */
+
+  .section-number {
+    font-size: 18px;
+  }
+
+  .secondary-text {
+    font-size: 18px;
+  }
+
+  .primary-text {
+    font-size: 70px;
+  }
+
+  /* Header */
+  .header {
+    padding: 37px 6%;
+  }
+
+  .header-logo a {
+    font-size: 27px;
+  }
+
+  #nav li a {
+    font-size: 12.5px;
+  }
+
+  #nav > li {
+    margin-right: 40px;
+  }
+  /* Burger Menu End */
+
+  /* Slideshow */
+  .slideshow-title {
+    font-size: 75px;
+  }
+
+  /* Featured Properties */
+
+  .listing-price {
+    font-size: 32px;
+  }
+
+  .listing-address {
+    font-size: 16px;
+  }
+
+  .bbs {
+    font-size: 15px;
+    margin-bottom: 20px;
+  }
+
+  .fp-arrow .slick-arrow {
+    max-width: initial;
+  }
+
+  .fp-descript {
+    bottom: -94px;
+  }
+
+  /* Welcome */
+
+  /* Featured Videos */
+
+  /* Neighborhood Guides */
+
+  /* Buy With Us | List With Us */
+
+  /* Testimonials */
+
+  /* Contact */
+
+  /* Footer */
+}
+
+@media only screen and (min-width: 1451px) {
+  /* Header */
+  .header-logo a {
+    font-size: 30px;
+  }
+
+  #nav li a {
+    font-size: 13px;
+  }
+
+  #nav > li {
+    margin-right: 46px;
+  }
+  /* Burger Menu End */
+
+  /* Slideshow */
+  .slideshow-title {
+    font-size: 85px;
+  }
+
+  /* Featured Properties */
+
+  .listing-address {
+    font-size: 17px;
+  }
+
+  .bbs {
+    font-size: 15px;
+    margin-bottom: 25px;
+  }
+
+  /* Welcome */
+
+  /* Featured Videos */
+
+  /* Neighborhood Guides */
+
+  /* Buy With Us | List With Us */
+
+  /* Testimonials */
+
+  /* Contact */
+
+  /* Footer */
+}
+
+@media only screen and (min-width: 1550px) {
+  .fp-inner {
+    width: 100%;
+  }
+}
+
+/* iPad(landscape) | iPad(landscape) | Galaxy Tab 4 (landscape) | Galaxy Tab 3 (landscape) */
+@media only screen and (max-width: 1199px) {
+}
+
+/* iPad(portrait) | Galaxy Tab 4(portrait)  */
+@media only screen and (max-width: 991px) {
+  /* Global */
+  .block {
+    padding: 30px 15px;
+    text-align: center;
+    margin: 0 auto;
+    /* max-width: 600px; */
+  }
+
+  .section-title {
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .site-btn a {
+    margin: 0 auto;
+  }
+
+  /* Pojo */
+  #pojo-a11y-toolbar {
+    display: none;
+  }
+
+  /* Header */
+  .header {
+    position: relative;
+    margin-top: 53px;
+    background: #000;
+    padding: 25px 15px;
+  }
+
+  .header-logo a {
+    text-align: center;
+  }
+
+  .header-nav,
+  .burger-menu {
+    display: none;
+  }
+
+  /* Burger Menu */
+  .bm-menu.bm-view {
+    display: none;
+  }
+
+  /* Sldieshow */
+  .slideshow-content {
+    position: relative;
+    top: -1px;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    padding: 25px 15px;
+
+    text-align: center;
+  }
+
+  .slideshow-title {
+    margin-bottom: 20px;
+  }
+
+  /* Featured Properties */
+  .hp-featured-properties .site-btn {
+    margin-bottom: 40px;
+  }
+
+  .fp-arrow {
+    display: none;
+  }
+
+  /* Welcome */
+  .welcome-inner {
+    display: grid;
+  }
+
+  .welcome-content {
+    order: -1;
+    margin-bottom: 50px;
+  }
+
+  .welcome-img img {
+    margin: 0 auto;
+  }
+
+  .hp-welcome p {
+    max-width: 75ch;
+    margin: 0 auto;
+  }
+
+  /* Neighborhood Guide */
+  .nb-arrow {
+    display: none;
+  }
+
+  .nb-title::before {
+    content: none;
+  }
+
+  /* Buy List With Us */
+  .buy-with-us {
+    margin-bottom: 60px;
+  }
+  .hp-buy-list p {
+    max-width: 75ch;
+    margin: 0 auto;
+  }
+
+  /* Testimonials */
+  .testi-arrow .slick-arrow {
+    display: none !important;
+  }
+
+  /* Contact */
+  .hp-contact .contact-form {
+    text-align: left;
+  }
+
+  .hp-contact.block {
+    padding: 30px 15px 60px;
+  }
+
+  /* The following are used on inner pages. Please edit carefully. */
+
+  .inner {
+    width: 100%;
+  }
+  #content-sidebar,
+  #content-full {
+    width: 100%;
+  }
+  .outer {
+    width: 100%;
+    min-width: 100%;
+  }
+  #content-sidebar #content {
+    width: 100%;
+  }
+}
+
+/* Galaxy Tab 3(portrait) | Galaxy S5(landscape) */
+@media only screen and (max-width: 767px) {
+  .ip-banner .container {
+    width: 100%;
+  }
+}
+
+/* Galaxy S5(portrait) | iPod Touch(landscape) | iPod Touch(portrait) */
+@media only screen and (max-width: 480px) {
+  /* Welcome */
+  .welcome-content {
+    margin-bottom: 30px;
+  }
+
+  /* Buy List With Us */
+  .hp-buy-list .section-number {
+    vertical-align: middle;
+  }
+}
